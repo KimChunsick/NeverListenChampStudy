@@ -9,7 +9,7 @@
 3. 리딩: R, 리스닝: L을 입력하고 쫌만 기다린다.
 4. 끝
 
-## Lisence
+## License
 This project is released under the
 
 
