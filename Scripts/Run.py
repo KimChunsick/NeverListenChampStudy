@@ -1,10 +1,9 @@
 from selenium import webdriver
-import time
 import os
 from Scripts.Command import *
 
 path = os.path.abspath("..") + '/chromedriver'
-browser = webdriver.Chrome(os.getcwd())
+print(path)
 browser = webdriver.Chrome(path)
 browser.get("http://kookmin.champstudy.com/")
 
@@ -18,7 +17,7 @@ subject = input("들을려는 수업 고르기 (리딩: R, 리스닝: L) : ");
 read = '//*[@id="layer1"]/table/tbody/tr[2]/td[2]/table/tbody/tr[10]/td/table/tbody/tr[4]/td[7]/a/img'
 listening = '//*[@id="layer1"]/table/tbody/tr[2]/td[2]/table/tbody/tr[10]/td/table/tbody/tr[7]/td[7]/a/img'
 xpath = read if subject == 'R' else listening
-program = CourseList((subject == read), xpath, browser)
+program = CourseList((read == xpath), xpath, browser)
 program.Excute()
 
 browser.quit()
