@@ -13,4 +13,4 @@
 This project is released under the
 
 
-            DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE
+DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE
