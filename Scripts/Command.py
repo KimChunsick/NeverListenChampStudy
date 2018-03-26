@@ -90,7 +90,6 @@ class CourseListening(Command): #리스닝 수업
         self.browser = browser
 
     def Excute(self):
-        print(self.count)
         self.browser.find_element_by_xpath('//*[@id="wrap"]/div/img').click()
         self.browser.find_element_by_xpath('//*[@id="_menu59%d"]' % CourseListening.count).click()
         time.sleep(0.5)
