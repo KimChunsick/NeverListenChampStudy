@@ -1,4 +1,3 @@
-from selenium import webdriver
 import time
 
 class Command:
@@ -43,6 +42,7 @@ class CourseList(Command): # 강의 리스트
         try:
             alert = self.browser.switch_to_alert()
             alert.accept()
+            CourseListening.count += 1
             return True;
         except:
             return False;
@@ -97,4 +97,7 @@ class CourseListening(Command): #리스닝 수업
         CourseListening.count += 1
         self.browser.close()
         self.browser.switch_to_window(self.browser.window_handles[0])
+
+
+
 
